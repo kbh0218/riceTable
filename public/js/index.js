@@ -434,14 +434,35 @@ async function fetchAndDisplayAverageRatings() {
         });
     }
 
-    // 평균 별점을 기준으로 내림차순 정렬
-    menuDataArray.sort((a, b) => b.avgRating - a.avgRating);
+    // 퀵정렬 함수 정의
+    function quickSort(arr) {
+        if (arr.length <= 1) {
+            return arr;
+        }
+
+        const pivot = arr[arr.length - 1];
+        const left = [];
+        const right = [];
+
+        for (let i = 0; i < arr.length - 1; i++) {
+            if (arr[i].avgRating > pivot.avgRating) {
+                left.push(arr[i]);
+            } else {
+                right.push(arr[i]);
+            }
+        }
+
+        return [...quickSort(left), pivot, ...quickSort(right)];
+    }
+
+    // 퀵정렬을 사용하여 평균 별점을 기준으로 내림차순 정렬
+    const sortedMenuDataArray = quickSort(menuDataArray);
 
     // 정렬된 메뉴를 DOM에 다시 추가
     const menuList = document.getElementById('menuList');
     menuList.innerHTML = ''; // 기존 메뉴 아이템 제거
 
-    menuDataArray.forEach((data, index) => {
+    sortedMenuDataArray.forEach((data, index) => {
         const menuItem = data.menuItem;
         const avgRating = data.avgRating;
 
