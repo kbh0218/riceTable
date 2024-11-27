@@ -13,7 +13,17 @@
             position: relative;
             display: inline-block;
         }
-
+        .weekly-menu{
+        color:black;
+        padding: 8px 20px;
+        margin: 10px 40px;
+        font-size: 20px;
+        background-color: white; /* 버튼 배경색 */
+        border: none; /* 버튼 테두리 색상 */
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s; /* 추가로 부드러운 효과*/ 
+        font-family: 'Noto Sans KR', sans-serif;   
+        }
         .ranking-container {
             width: 230px;
             background: white;
@@ -141,7 +151,7 @@
             <button onclick="showBoard()">게시판</button>
             <button onclick="showRating()">평가</button>
             <div class="nav-item-with-ranking">
-                <button>주간 인기메뉴</button>
+                <button class="weekly-menu">주간 인기메뉴</button>
                 <div class="ranking-container" id="rankingContainer">
                     <div class="ranking-header">
                         <h3 class="ranking-title">주간 인기메뉴</h3>
