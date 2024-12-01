@@ -1,72 +1,119 @@
-class DayNode {
-    constructor(name, price, date) {
-        this.name = name;
-        this.price = price;
-        this.sideDishes = [];
-        this.date = date;
-        this.next = null;
+class MenuNode {
+    constructor(restaurant, name, price, sideDishes) {
+        this.restaurant = restaurant;    
+        this.name = name;                
+        this.price = price;              
+        this.sideDishes = sideDishes;    
+        this.next = null;                
+        this.prev = null;                
     }
 }
-class Restaurant {
-    constructor(name) {
-        this.name = name;
+
+// 캠퍼스 식당 메뉴 관리를 위한 이중연결리스트 클래스
+class CampusRestaurants {
+    constructor() {
         this.head = null;
-        this.length = 0;
-    }
-    addMenu(menuName, price, sideDishes = []) {
-        const today = new Date();
-        const newMenu = new DayNode(menuName, price, today);
-        newMenu.sideDishes = sideDishes
-        newMenu.next = this.head
-        this.head = newMenu;
-        this.length++;
-        return newMenu;
-    }
-    getAllTodayMenu() {
-        if (!this.head) {
-            return {};
-        }
-        return {
-            name: this.head.name,
-            price: this.head.price,
-            sideDishes: this.head.sideDishes
-        };
+        this.tail = null;
+        this.size = 0;
     }
 
-    findMenuByDate(date) {
+    // 새로운 메뉴 추가
+    addMenu(restaurant, name, price, sideDishes) {
+        const newNode = new MenuNode(restaurant, name, price, sideDishes);
+        
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            this.tail.next = newNode;
+            newNode.prev = this.tail;
+            this.tail = newNode;
+        }
+        
+        this.size++;
+    }
+
+    // 특정 식당의 메뉴 삭제
+    removeMenu(restaurant) {
         let current = this.head;
+        
         while (current) {
-            if (current.date.toDateString() === date.toDateString()) {
-                return current;
+            if (current.restaurant === restaurant) {
+                if (current === this.head && current === this.tail) {
+                    this.head = null;
+                    this.tail = null;
+                } else if (current === this.head) {
+                    this.head = current.next;
+                    this.head.prev = null;
+                } else if (current === this.tail) {
+                    this.tail = current.prev;
+                    this.tail.next = null;
+                } else {
+                    current.prev.next = current.next;
+                    current.next.prev = current.prev;
+                }
+                this.size--;
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
+    // 모든 식당의 오늘 메뉴 정보 반환
+    getAllTodayMenus() {
+        const menus = {};
+        let current = this.head;
+        
+        while (current) {
+            menus[current.restaurant] = {
+                name: current.name,
+                price: current.price,
+                sideDishes: current.sideDishes
+            };
+            current = current.next;
+        }
+        
+        return menus;
+    }
+
+    // 특정 식당의 메뉴 정보 찾기
+    findMenu(restaurant) {
+        let current = this.head;
+        
+        while (current) {
+            if (current.restaurant === restaurant) {
+                return {
+                    name: current.name,
+                    price: current.price,
+                    sideDishes: current.sideDishes
+                };
             }
             current = current.next;
         }
         return null;
     }
-}
-class CampusRestaurants {
-    constructor() {
-        this.restaurants = {
-            myungJinDang: new Restaurant('명진당'),
-            studentHall: new Restaurant('학생회관'),
-            facultyHall: new Restaurant('교직원 식당'),
-            welfare: new Restaurant('복지동 식당')
-        };
-    }
-    addMenu(restaurantName, menuName, price, sideDishes = []) {
-        const restaurant = this.restaurants[restaurantName];
-        if (restaurant) {
-            return restaurant.addMenu(menuName, price, sideDishes);
+
+    // 메뉴 정보 업데이트
+    updateMenu(restaurant, newName, newPrice, newSideDishes) {
+        let current = this.head;
+        
+        while (current) {
+            if (current.restaurant === restaurant) {
+                current.name = newName;
+                current.price = newPrice;
+                current.sideDishes = newSideDishes;
+                return true;
+            }
+            current = current.next;
         }
-        return null;
+        return false;
     }
-    getAllTodayMenus() {
-        const allMenus = {};
-        for (const [key, restaurant] of Object.entries(this.restaurants)) {
-            allMenus[key] = restaurant.getAllTodayMenu();
-        }
-        return allMenus;
+
+    // 전체 메뉴 리스트의 크기 반환
+    getSize() {
+        return this.size;
     }
 }
 
-export { DayNode, Restaurant, CampusRestaurants };
+export { CampusRestaurants };

@@ -734,8 +734,3 @@ function closeContentModal() {
 // }
 
 // document.getElementById('sortOptions').addEventListener('change', sortPosts);
-
-
-
-
-

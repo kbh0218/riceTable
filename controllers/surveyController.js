@@ -1,5 +1,6 @@
 const Survey = require('../models/Survey');
 const UserVote = require('../models/UserVote');
+const SurveyLinkedList = require('../public/js/surveylinkedList');
 
 // 특정 식당의 투표 데이터 가져오기
 exports.getSurveyData = async (req, res) => {
@@ -7,14 +8,9 @@ exports.getSurveyData = async (req, res) => {
     try {
         const surveys = await Survey.find({ restaurantId: Number(restaurantId) });
 
-        // 데이터를 날짜별로 구조화
-        const data = {};
-        surveys.forEach(survey => {
-            if (!data[survey.date]) {
-                data[survey.date] = {};
-            }
-            data[survey.date][survey.timeSlot] = survey.count;
-        });
+        const surveyList = new SurveyLinkedList();
+        await surveyList.loadFromMongoDB(Number(restaurantId), new Date().toISOString().split('T')[0]);
+        const data = surveyList.toResponseFormat();
 
         res.json(data);
     } catch (error) {
@@ -48,17 +44,9 @@ exports.vote = async (req, res) => {
             { upsert: true, new: true }
         );
 
-        // 업데이트된 데이터를 반환
-        const surveys = await Survey.find({ restaurantId });
-
-        // 데이터를 날짜별로 구조화
-        const data = {};
-        surveys.forEach(survey => {
-            if (!data[survey.date]) {
-                data[survey.date] = {};
-            }
-            data[survey.date][survey.timeSlot] = survey.count;
-        });
+        const surveyList = new SurveyLinkedList();
+        await surveyList.loadFromMongoDB(Number(restaurantId), date);
+        const data = surveyList.toResponseFormat();
 
         res.json(data);
     } catch (error) {
