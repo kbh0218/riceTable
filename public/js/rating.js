@@ -124,9 +124,9 @@ document.getElementById('newPostBtn').onclick = function () {
     // 메뉴 설명 표시
     const menuDescriptions = {
         1: "명진당 메뉴: 기사식당돼지불백",
-        2: "학생회관 메뉴: 불맛나가사끼짬뽕",
-        3: "교직원 식당 메뉴: 제육볶음",
-        4: "복지동 식당 메뉴: 김치돈육조림"
+        2: "학생회관 메뉴: 돼지김치짜글이 + 김가루",
+        3: "교직원 식당 메뉴: 치킨까스",
+        4: "복지동 식당 메뉴: 닭곰탕&소면사리"
     };
     const menuDescription = menuDescriptions[currentBoard] || "메뉴 정보 없음";
     const menuElement = document.createElement('p');
@@ -199,9 +199,9 @@ postForm.onsubmit = async function (event) {
 
     const menuDescriptions = {
         1: "명진당 메뉴: 기사식당돼지불백",
-        2: "학생회관 메뉴: 불맛나가사끼짬뽕",
-        3: "교직원 식당 메뉴: 제육볶음",
-        4: "복지동 식당 메뉴: 김치돈육조림"
+        2: "학생회관 메뉴: 돼지김치짜글이 + 김가루",
+        3: "교직원 식당 메뉴: 치킨까스",
+        4: "복지동 식당 메뉴: 닭곰탕&소면사리"
     };
     const title = menuDescriptions[currentBoard] || "메뉴 정보 없음";
 

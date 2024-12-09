@@ -230,16 +230,6 @@ function sortAndDisplayPosts(posts) {
     displayPosts(sortedPosts);
 }
 
-// 정렬 옵션 변경 시 이벤트 핸들러 주석처리
-// document.getElementById('sortOptions').addEventListener('change', function() {
-//     sortBy = this.value;
-//     if (document.getElementById('searchInput').value.trim()) {
-//         filterPosts();
-//     } else {
-//         sortAndDisplayPosts(cachedPosts);
-//     }
-// });
-
 async function showPostContent(id) {
     try {
         const response = await fetch(`/api/posts/${id}`, {

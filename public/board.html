@@ -32,7 +32,6 @@
                 <option value="likes">좋아요순</option>
                 <option value="title">제목순</option>
             </select>
-            <!-- 정렬 버튼 추가 -->
             <button id="sortBtn">정렬</button>
             <div style="flex-grow: 1; text-align: right;">
                 <input type="text" id="searchInput" placeholder="검색...">
@@ -40,7 +39,6 @@
                     <option value="title">제목</option>
                     <option value="content">내용</option>
                 </select>
-                <!-- 검색 버튼에 id 추가 -->
                 <button id="searchBtn">검색</button>
             </div>
         </div>
@@ -59,7 +57,6 @@
         </div>
     </div>
 
-    <!-- 게시글 내용 모달 -->
     <div id="contentModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeContentModal()">&times;</span>
@@ -71,7 +68,6 @@
     </div>
 </div>
 
-    <!-- 댓글 모달 -->
 <div id="commentModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeCommentModal()">&times;</span>
@@ -85,7 +81,6 @@
 
     
     <script>
-        // 댓글 보기 버튼 클릭 시, 해당 게시글 ID 전달
         document.getElementById('commentButton').onclick = function () {
             if (selectedPostId) {
                 openCommentModal(selectedPostId);

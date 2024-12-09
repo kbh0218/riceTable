@@ -39,30 +39,30 @@ document.addEventListener("DOMContentLoaded", function() {
    
    // 메뉴 데이터 설정
    campus.addMenu('myungJinDang', '기사식당돼지불백', 6500, [
-       '김치우동장국',
-       '동그랑땡*케찹',
-       '고추장아찌',
+       '애호박배추된장국',
+       '햄어묵야채볶음',
+       '양념깻잎무침',
        '배추김치*쌀밥',
        '요구르트'
    ]);
 
-   campus.addMenu('studentHall', '불맛나가사끼짬뽕', 6000, []);
+   campus.addMenu('studentHall', '돼지김치짜글이 + 김가루', 6000, []);
 
-   campus.addMenu('facultyHall', '제육볶음', 6500, [
+   campus.addMenu('facultyHall', '치킨까스', 6500, [
        '잡곡밥/쌀밥',
-       '미역국',
-       '고구마맛탕',
+       '옥수수스프',
        '콩나물무침',
-       '깍두기',
+       '모둠콜리숙회',
+       '배추김치',
        '샐러드&드레싱',
        '요구르트'
    ]);
 
-   campus.addMenu('welfare', '김치돈육조림', 6000, [
+   campus.addMenu('welfare', '닭곰탕&소면사리', 6500, [
        '백미밥',
-       '미역국',
-       '메추리알곤조림',
-       '고사리나물',
+       '너비아니구이',
+       '도토리묵무침',
+       '브로콜리숙회',
        '깍두기'
    ]);
 

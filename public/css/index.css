@@ -13,10 +13,10 @@ body {
 
 header {
     background-color:white;
-    color: white; /* 흰색 텍스트 */
+    color: white;
     text-align: center;
     padding: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #home-title {
@@ -26,9 +26,9 @@ header {
     cursor: pointer;
     transition: transform 0.2s;
     display: flex;
-    align-items: center; /* Vertically centers the text with the image */
+    align-items: center; 
 }
-/* 로고 글꼴 변경 */
+
 #home-title span {
     font-family: "East Sea Dokdo", serif;
     font-weight: 400;
@@ -39,12 +39,12 @@ header {
 #home-title img {
     width: 100px;
     height: auto;
-    margin-right: 10px; /* Adds space between the image and text */
+    margin-right: 10px; 
 }
 
 #home-title span {
-    font-size: 50px; /* Adjust font size as needed */
-    color: black; /* Set text color */
+    font-size: 50px;
+    color: black; 
     padding:5px;
 }
 
@@ -52,7 +52,7 @@ header {
     transform: scale(1.1);
 }
 nav {
-    margin-top: 20px; /* 네비게이션 메뉴와 로고 사이에 여백 추가 */
+    margin-top: 20px; 
     font-family: 'Noto Sans KR', sans-serif;
 }
 nav button {
@@ -60,10 +60,10 @@ nav button {
     margin: 10px;
     padding: 8px 20px;
     font-size: 16px;
-    background-color: white; /* 버튼 배경색 */
-    border: none; /* 버튼 테두리 색상 */
+    background-color: white;
+    border: none; 
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* 추가로 부드러운 효과*/ 
+    transition: background-color 0.3s, transform 0.2s; 
     font-family: 'Noto Sans KR', sans-serif;
 }
 /* 게시판과 평가 버튼만 margin 10px 20px 적용 */
@@ -74,17 +74,17 @@ nav > button:nth-child(2) {
 }
 /* 호버담당 */
 nav button:hover {
-    background-color: #f0f0f0; /* 마우스 오버 효과 */
+    background-color: #f0f0f0; 
 }
 
 #auth-buttons ,#user-buttons {
-    gap: 5px; /* 로그인, 회원가입 버튼 사이 간격 */
+    gap: 5px; 
     text-align: right;
 }
 
 #authButton,#user-buttons {
     color: rgb(0, 0, 0);
-    font-size: 12px; /* 버튼 텍스트 크기 조정 */
+    font-size: 12px; 
     border: none;
     cursor: pointer;
     font-family: 'Noto Sans KR', sans-serif;
@@ -99,9 +99,9 @@ nav button:hover {
 
 #restaurant-section {
     display: flex;
-    justify-content: space-between; /* 박스 간 간격을 줄임 */
-    flex-wrap: wrap; /* 여러 줄로 배치 */ 
-    margin: 20px; /* 섹션 여백 */
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    margin: 20px;
     gap:10px;
 }
 
@@ -115,28 +115,28 @@ nav button:hover {
     cursor: pointer;
 
     /* 크기 설정 */
-    width: calc(45% - 35px); /* 가로 크기 증가 */
-    height: 400px; /* 고정된 세로 크기 */
-    margin: 10px; /* 박스 간 간격 */
-    padding: 20px; /* 내부 여백 */
+    width: calc(45% - 35px);
+    height: 400px; 
+    margin: 10px; 
+    padding: 20px; 
 }
 .restaurant-box > p{
     font-size: 16px;
     font-family: 'Noto Sans KR', sans-serif;
 }
 .restaurant-box:hover {
-    transform: translateY(-5px); /* 마우스 오버 시 위로 이동 */
+    transform: translateY(-5px);
 }
 
 .restaurant-box img {
     width: 100%;
-    height: auto; /* 이미지 비율 유지 */
-    object-fit: cover; /* 박스에 맞게 조정 */
+    height: auto; 
+    object-fit: cover;
     border-radius: 5px;
 }
 
 .post-title {
-    font-size: 1.5em; /* 제목 크기 키우기 */
+    font-size: 1.5em;
     margin: 0;
 }
 
@@ -179,7 +179,7 @@ footer {
     text-align: center;
     background-color: white;
     color: rgb(171, 171, 171);
-    margin-top: auto; /* 화면 하단 고정 */
+    margin-top: auto; 
     font-size: 12px;
 }
 .popup {
@@ -189,17 +189,17 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* 반투명 검은 배경 */
+    background-color: rgba(0, 0, 0, 0.7); 
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* 다른 요소 위에 배치 */
+    z-index: 1000; 
 }
 
 .popup-content {
     background-color: white;
     padding: 20px;
     text-align: center;
-    width: 600px; /* 팝업 가로 크기 증가 */
+    width: 600px; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -208,7 +208,7 @@ footer {
     margin: 10px;
     padding: 10px;
     font-size: 18px;
-    background-color: transparent; /* 버튼 배경 투명 */
+    background-color: transparent;
     color: black;
     border: 1px solid #A4A4A4;
     border-radius: 5px;
@@ -217,13 +217,13 @@ footer {
 
 
 .time-slot-button {
-    background-color: #90EE90; /* 옅은 초록색 */
+    background-color: #90EE90; 
     border: 1px solid #ccc;
     padding: 10px;
     margin: 5px;
     cursor: pointer;
-    width: 30; /* 버튼 너비를 30%로 설정 */
-    box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+    width: 30;
+    box-sizing: border-box; 
     color: black;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -232,29 +232,29 @@ footer {
 
 .time-slot-button.selected,
 .time-slot-button:hover {
-    background-color: #03aa5a; /* 진한 초록색 */
+    background-color: #03aa5a; 
     color: white;
 }
 
 .button-row {
     display: flex;
-    flex-wrap: wrap; /* 줄바꿈을 허용 */
-    justify-content: space-between; /* 버튼 사이 여백 균등 분배 */
-    gap: 10px; /* 버튼 간 간격 추가 */
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 10px; 
 }
 
 @media (max-width: 768px) {
     .restaurant-box {
-        width: calc(100% - 40px); /* 작은 화면에서 1열로 변경 */
+        width: calc(100% - 40px);
     }
     #home-title img {
-        width: 60px; /* 이미지의 너비를 100px로 설정 */
-        height: auto; /* 높이는 비율에 맞춰 자동 조정 */
+        width: 60px;
+        height: auto;
     }
     #home-title span {
-        font-size: 18px; /* Adjust font size as needed */
+        font-size: 18px; 
         padding: 0;
-        color: black; /* Set text color */
+        color: black; 
     }
     
     .auth-buttons {
@@ -276,32 +276,32 @@ footer {
 
 @media (max-width: 599px) {
     .restaurant-box {
-        width: 100%; /* 화면이 좁을 때 1열로 변경 */
+        width: 100%;
     }
     .popup-content {
-        width: 90%; /* 팝업 너비를 화면의 90%로 설정 */
-        padding: 10px; /* 내부 여백 줄임 */
+        width: 90%; 
+        padding: 10px;
     }
 
     .popup-content button {
-        font-size: 12px; /* 버튼 글씨 크기 줄임 */
-        padding: 5px 10px; /* 버튼 내부 여백 축소 */
-        margin: 5px; /* 버튼 간 간격 조정 */
-        width: auto; /* 내용에 맞게 버튼 너비 조정 */
+        font-size: 12px;
+        padding: 5px 10px;
+        margin: 5px; 
+        width: auto; 
     }
 
     .time-slot-button {
-        width: 25%; /* 버튼 크기를 화면의 25%로 설정 */
-        padding: 8px; /* 내부 여백 조정 */
-        margin: 5px; /* 버튼 간 간격 유지 */
-        text-align: center; /* 텍스트 중앙 정렬 */
+        width: 25%;
+        padding: 8px;
+        margin: 5px; 
+        text-align: center;
     }
 
     .button-row {
         display: flex;
-        flex-wrap: wrap; /* 버튼이 줄바꿈되도록 설정 */
-        justify-content: space-around; /* 버튼 간격 균등 분배 */
-        gap: 5px; /* 버튼 간의 간격 설정 */
+        flex-wrap: wrap; 
+        justify-content: space-around; 
+        gap: 5px; 
     }
     #datetime {
         display:none;
@@ -313,29 +313,29 @@ footer {
     border-collapse: collapse;
     margin: 15px 0;
     font-family: 'Noto Sans KR', sans-serif;
-    table-layout: fixed; /* 열 크기 고정 */
+    table-layout: fixed; 
 }
 
 .menu-table th:first-child {
-    width: 20% !important; /* 첫 번째 열 너비 */
+    width: 20% !important;
     background-color: #f8f9fa;
     font-weight: bold;
     color: #333;
 }
 
 .menu-table td:first-child {
-    width: 20% !important; /* 첫 번째 열 너비 */
+    width: 20% !important;
 }
 
 .menu-table th:last-child {
-    width: 80% !important; /* 두 번째 열 너비 */
+    width: 80% !important; 
     background-color: #f8f9fa;
     font-weight: bold;
     color: #333;
 }
 
 .menu-table td:last-child {
-    width: 80% !important; /* 두 번째 열 너비 */
+    width: 80% !important;
 }
 
 .menu-table th, .menu-table td {

@@ -34,7 +34,7 @@ header {
   height: auto;
   margin-right: 10px;
   margin-bottom: 10px;
-  margin-top: 30px; /* 위쪽 여백 추가 */
+  margin-top: 30px;
 }
 
 #home-title span {
@@ -78,9 +78,9 @@ nav button:hover {
 /* 로그아웃 버튼 스타일 */
 #logout-button {
   position: absolute;
-  top: 70%; /* 버튼을 수직 가운데로 */
+  top: 70%; 
   right: 3%;
-  transform: translateY(-50%); /* 정렬 보정 */
+  transform: translateY(-50%); 
   font-size: 16px;
   color: black;
   border: none;
@@ -96,57 +96,11 @@ nav button:hover {
 #datetime {
   font-size: 16px;
   color: black;
-  position: absolute; /* 절대 위치 */
-  left: 50%; /* 수평 중앙 정렬 */
-  transform: translateX(-50%); /* 정렬 보정 */
-  margin-top: 15px; /* 위쪽 여백 */
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  margin-top: 15px; 
 }
-
-
-/*
-.header-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 20px;
-  position: relative;
-  margin: 0;
-}
-
-.auth-buttons {
-  display: flex;
-  gap: 10px;
-  margin-left: auto;
-}
-
-.authButton {
-  color: rgb(0, 0, 0);
-  font-size: 12px;
-  border: none;
-  cursor: pointer;
-  padding: 5px 10px;
-}
-
-#datetime {
-  font-size: 16px;
-  color: black;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 40px;
-}
-
-body {
-  font-family: 'Noto Sans KR', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #f4f6f9, #ffffff); 
-  color: #333; 
-  background-attachment: fixed;
-  transition: background 0.3s ease-in-out; 
-} */
-
 
 /* 메인 컨텐츠 스타일 */
 main {
@@ -155,7 +109,7 @@ main {
   max-width: 1200px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 모던한 박스 그림자 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 ul {
@@ -193,39 +147,39 @@ label {
   display: inline-block;
   margin-right: 10px;
   font-size: 1rem;
-  color: black; /* 라벨 텍스트가 보이도록 검은색 설정 */
+  color: black; 
 }
 
 input[type="radio"] {
   margin-right: 5px;
-  transform: scale(1.2); /* 라디오 버튼 크기 조절 */
+  transform: scale(1.2);
 }
 
 /* 별점 영역 스타일 */
 .rating {
-  display: inline-flex; /* 한 줄에 딱 맞게 정렬 */
-  align-items: center; /* 세로 정렬 */
-  direction: rtl; /* 오른쪽에서 왼쪽 정렬 */
+  display: inline-flex;
+  align-items: center; 
+  direction: rtl; 
 }
 
 .rating span {
-  color: black; /* 텍스트를 검정색으로 설정 */
-  font-weight: bold; /* 텍스트 강조 */
-  margin: 0; /* 간격 제거 */
-  padding: 0; /* 내부 여백 제거 */
+  color: black; 
+  font-weight: bold; 
+  margin: 0; 
+  padding: 0;
 }
 
 .rating input {
-  display: none; /* 라디오 버튼 숨김 */
+  display: none;
 }
 
 .rating label {
   font-size: 2rem;
-  color: lightgray; /* 기본 상태에서는 연한 회색 */
+  color: lightgray;
   cursor: pointer;
   transition: color 0.3s;
-  margin: 0; /* 간격 제거 */
-  padding: 0; /* 내부 여백 제거 */
+  margin: 0; 
+  padding: 0; 
 }
 
 /* 선택된 별과 그 오른쪽 별들을 금색으로 표시 */
@@ -263,7 +217,7 @@ input[type="radio"] {
 }
 /* 게시글 작성 제목만 검정색으로 설정 */
 #postModal h2 {
-  color: black; /* 검정색으로 설정 */
+  color: black;
 }
 
 .close {
@@ -275,20 +229,20 @@ input[type="radio"] {
 
 /* 글 내용 모달 스타일 */
 #contentModal {
-  display: none; /* 기본적으로 숨김 */
+  display: none; 
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
   background-color: #fff;
-  width: 80%; /* 가로 크기 설정 */
-  max-width: 600px; /* 최대 너비 설정 */
+  width: 80%; 
+  max-width: 600px; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
   overflow-y: auto;
-  max-height: 80vh; /* 화면 높이에 따라 스크롤 */
+  max-height: 80vh; 
 }
 
 /* 모달 내부 내용 정렬 및 스타일 */
@@ -301,7 +255,7 @@ input[type="radio"] {
   transform: translate(-50%, -50%);
   z-index: 1000;
   background-color: #fff;
-  width: 70%; /* 약간 줄인 가로 크기 설정 */
+  width: 70%;
   max-width: 600px;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -319,8 +273,8 @@ input[type="radio"] {
 
 
 #contentModal h2 {
-  color: #333; /* 제목 색상 */
-  font-size: 1.8rem; /* 조금 더 큰 제목 */
+  color: #333;
+  font-size: 1.8rem; 
   margin-bottom: 15px;
 }
 
@@ -337,20 +291,20 @@ input[type="radio"] {
   border-radius: 8px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   flex-grow: 1;
-  height: auto; /* 높이 자동 설정 */
+  height: auto; 
   margin-bottom: 15px;
 }
 #postContent + p {
-  margin-top: auto; /* 별점이 최하단에 위치하도록 설정 */
-  text-align: right; /* 별점 오른쪽 정렬 */
+  margin-top: auto; 
+  text-align: right; 
   margin-bottom: 0;
-  font-size: 1.5rem; /* 별점 크기 조절 */
+  font-size: 1.5rem;
 }
 
 #postRating {
-  text-align: left; /* 별점을 왼쪽에 정렬 */
+  text-align: left; 
   font-size: 1.5rem;
-  margin: 0 0 15px 0; /* 위와 아래 여백 추가 */
+  margin: 0 0 15px 0; 
 }
 /* 닫기 버튼 스타일 */
 #contentModal .close {
@@ -365,14 +319,14 @@ input[type="radio"] {
 }
 
 #contentModal .close:hover {
-  color: #000; /* 마우스 오버 시 닫기 버튼 색상 변경 */
+  color: #000;
 }
 
 
 #title {
   width: 100%;
-  max-width: 500px; /* 최대 너비 고정 */
-  height: 40px; /* 높이 고정 */
+  max-width: 500px; 
+  height: 40px;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -382,14 +336,14 @@ input[type="radio"] {
 
 #content {
   width: 100%;
-  max-width: 500px; /* 최대 너비 고정 */
-  height: 200px; /* 높이 고정 */
+  max-width: 500px; 
+  height: 200px;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  resize: none; /* 사용자가 크기 조절 못하도록 설정 */
+  resize: none; 
 }
 
 /* rating.css에 추가 */

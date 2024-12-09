@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Gowun+Batang&family=Gowun+Dodum&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
     <style>
-        /* 메뉴 랭킹 스타일 추가 */
         .nav-item-with-ranking {
             position: relative;
             display: inline-block;
@@ -18,10 +17,10 @@
         padding: 8px 20px;
         margin: 10px 40px;
         font-size: 19px;
-        background-color: white; /* 버튼 배경색 */
-        border: none; /* 버튼 테두리 색상 */
+        background-color: white;
+        border: none; 
         cursor: pointer;
-        transition: background-color 0.3s, transform 0.2s; /* 추가로 부드러운 효과*/ 
+        transition: background-color 0.3s, transform 0.2s; 
         font-family: 'Noto Sans KR', sans-serif;   
         }
         .ranking-container {
@@ -175,7 +174,7 @@
                             <div class="rank-badge rank-2">2</div>
                             <class="menu-image">
                             <div class="menu-info">
-                                <p class="menu-name">불맛나가사끼짬뽕</p>
+                                <p class="menu-name">돼지김치짜글이+김가루</p>
                                 <p class="menu-price">학생회관 12월 10일</p>
                                 <div class="menu-stats">
                                     <span class="star-rating"></span>
@@ -187,7 +186,7 @@
                             <div class="rank-badge rank-3">3</div>
                             <class="menu-image">
                             <div class="menu-info">
-                                <p class="menu-name">제육볶음</p>
+                                <p class="menu-name">치킨까스</p>
                                 <p class="menu-price">교직원 식당 12월 10일</p>
                                 <div class="menu-stats">
                                     <span class="star-rating"></span>
@@ -199,7 +198,7 @@
                             <div class="rank-badge rank-4">4</div>
                             <class="menu-image">
                             <div class="menu-info">
-                                <p class="menu-name">김치돈육조림</p>
+                                <p class="menu-name">닭곰탕&소면사리</p>
                                 <p class="menu-price">복지동 식당 12월 10일</p>
                                 <div class="menu-stats">
                                     <span class="star-rating"></span>
@@ -211,7 +210,7 @@
                             <div class="rank-badge rank-5">5</div>
                             <class="menu-image">
                             <div class="menu-info">
-                                <p class="menu-name">얼큰쫄면순두부</p>
+                                <p class="menu-name">닭다리삼계탕</p>
                                 <p class="menu-price">명진당 12월 9일</p>
                                 <div class="menu-stats">
                                     <span class="star-rating"></span>
@@ -223,7 +222,7 @@
                             <div class="rank-badge rank-2">6</div>
                             <class="menu-image">
                             <div class="menu-info">
-                                <p class="menu-name">스팸마요덮밥</p>
+                                <p class="menu-name">가츠동</p>
                                 <p class="menu-price">학생회관 12월 9일</p>
                                 <div class="menu-stats">
                                     <span class="star-rating"></span>
@@ -235,7 +234,7 @@
                             <div class="rank-badge rank-3">7</div>
                             <class="menu-image">
                             <div class="menu-info">
-                                <p class="menu-name">시래기장칼국수</p>
+                                <p class="menu-name">순두부찌개</p>
                                 <p class="menu-price">교직원 식당 12월 9일</p>
                                 <div class="menu-stats">
                                     <span class="star-rating"></span>
@@ -247,7 +246,7 @@
                             <div class="rank-badge rank-4">8</div>
                             <class="menu-image">
                             <div class="menu-info">
-                                <p class="menu-name">눈꽃치즈돈까스</p>
+                                <p class="menu-name">장칼국수</p>
                                 <p class="menu-price">복지동 식당 12월 9일</p>
                                 <div class="menu-stats">
                                     <span class="star-rating"></span>
@@ -265,32 +264,28 @@
                 <button onclick="goToMyPage()">마이페이지</button>  
                 <button onclick="logout()">로그아웃</button>
             </div>
-        </nav> <!-- 여기 nav 닫는 태그 추가 -->
+        </nav>
         <div id="datetime"></div>
     </header>
     <section id="restaurant-section">
         <div class="restaurant-box" onclick="openPopup(1)">
             <h2>명진당</h2>
             <h3>운영시간 : 11:30 ~ 14:30</h3>
-            <!-- <img src="menu1.jpg" alt="명진당 메뉴사진"> -->
             <p class="menu-info"></p>
         </div>
         <div class="restaurant-box" onclick="openPopup(2)">
             <h2>학생회관</h2>
             <h3>운영시간 : 10:00 ~ 15:00</h3>
-            <!-- <img src="menu2.jpg" alt="학생회관 메뉴사진"> -->
             <p class="menu-info"></p>
         </div>
         <div class="restaurant-box" onclick="openPopup(3)">
             <h2>교직원 식당</h2>
             <h3>운영시간 : 11:30 ~ 13:30</h3>
-            <!-- <img src="menu3.jpg" alt="교직원식당 메뉴사진"> -->
             <p class="menu-info"></p>
         </div>
         <div class="restaurant-box" onclick="openPopup(4)">
             <h2>복지동 식당</h2>
             <h3>운영시간 : 11:30 ~ 13:30</h3>
-            <!-- <img src="menu4.jpg" alt="복지동 메뉴사진"> -->
             <p class="menu-info"></p>
         </div>
     </section>
@@ -299,10 +294,8 @@
         <div class="popup-content">
             <h2 id="popup-title">식당 선택</h2>
             <p id = "popup-middel"></p>
-            <p id="voteCount">체크 인원: 0명</p> <!-- 인원수 표시 -->
-            <!-- 시간대 선택 폼 -->
+            <p id="voteCount">체크 인원: 0명</p> 
             <div id="timeSlotForm">
-                <!-- 시간대 옵션이 여기에 추가됩니다 -->
             </div>
             <button onclick="submitResponse()">투표하기</button>
             <button onclick="closePopup()">닫기</button>
